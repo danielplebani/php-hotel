@@ -47,6 +47,8 @@ $hotels = [
     ],
 
 ];
+
+$with_parking = $GET['with_parking'];
 ?>
 
 <!DOCTYPE html>
@@ -62,11 +64,12 @@ $hotels = [
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="container p-5">
 
-    <div class="container p-5 d-flex flex-wrap justify-content-center gap-3">
+    <div class="d-flex flex-wrap justify-content-center gap-3">
 
         <?php foreach ($hotels as $key => $hotel): ?>
+            
             <div class="card" style="width: calc(90% / 3)">
                 <div class="card-body">
                     <h5 class="card-title">
@@ -76,6 +79,7 @@ $hotels = [
                         <?= $hotel['description'] ?>
                     </p>
                 </div>
+
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         VOTO :
